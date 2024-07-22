@@ -1,0 +1,6 @@
+[Unit]
+Description=Log Watch Script
+
+[Service]
+ExecStart=/usr/local/bin/ulogwatch.py --outfile /var/log/ulogwatch.log --mark-read --loglevel ERROR /var/log/ulogd/ulogd.sqlite3db
+Type=oneshot
